@@ -2,8 +2,8 @@
 
 Mata Kuliah Pengembangan Web dan Praktikum Pengembangan Web
 
-## NIM : 1207050110
+#### NIM : 1207050110
 
-## Nama : Rizki Aryandi
+#### Nama : Rizki Aryandi
 
-## Web : <a href="https://founder.yandmedia.id">https://founder.yandmedia.id</a>
+#### Web : <a href="https://founder.yandmedia.id">https://founder.yandmedia.id</a>
