@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+}
+
+#table-container table {
+  border: 0.01px solid #fff;
+  color: #fff;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#form-container {
+  padding: 12px;
+  width: 240px;
+}
+
+#form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+#form-container form input,
+#form-container form button {
+  margin-bottom: 12px;
+}
+
+#table-container {
+  flex-grow: 1;
+  padding: 12px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="form-container">
+      <form id="form" action="http://localhost:3000/penduduk" method="POST">
+        <input type="text" name="nik" placeholder="NIK" />
+        <input type="text" name="nama" placeholder="Nama" />
+        <input type="text" name="alamat" placeholder="Alamat" />
+        <button id="ct-url-encoded">Kirim Via Content Type URL Encoded</button>
+        <button id="ct-application-json" type="button">
+          Kirim Via Content Type Application JSON
+        </button>
+      </form>
+    </div>
+    <div id="table-container">
+      <span id="response"></span>
+      <table border="1">
+        <tr>
+          <th>NIK</th>
+          <th>Nama</th>
+          <th>Alamat</th>
+        </tr>
+      </table>
+    </div>
+    <script>
+      var nik = document.getElementsByName("nik")[0];
+      var nama = document.getElementsByName("nama")[0];
+      var alamat = document.getElementsByName("alamat")[0];
+      var postJSONButton = document.getElementById("ct-application-json");
+
+      postJSONButton.onclick = function (e) {
+        e.preventDefault();
+        console.log("NIK nya", nik.value);
+        console.log("Nama nya", nama.value);
+        console.log("Alamat nya", alamat.value);
+
+        var urlPOST = document.getElementById("form").getAttribute("action");
+
+        fetch(urlPOST, {
+          method: "POST",
+          body: JSON.stringify({
+            nik: nik,
+            nama: nama,
+            alamat: alamat,
+          }),
+          headers: new Headers({
+            "Content-Type": "application/json; charset=UTF-8",
+          }),
+        })
+          .then((response1) => {
+            return response1.json();
+          })
+          .then((response) => {
+            document.getElementById("response").innerHTML =
+              JSON.stringify(response);
+          });
+      };
+
+      fetch("https://catfact.ninja/fact")
+        .then((mentah) => {
+          return mentah.json();
+        })
+        .then((mateng) => {
+          console.log(mateng);
+        });
+    </script>
+  </body>
+</html>
