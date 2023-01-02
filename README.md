@@ -14,4 +14,4 @@ Mata Kuliah Pengembangan Web dan Praktikum Pengembangan Web
 
 #### UAS
 
-![UAS Demo APP + Source Code](https://youtu.be/1ORhXXW7CRc)
+<a href="https://youtu.be/1ORhXXW7CRc">UAS Demo APP + Source Code</a>
