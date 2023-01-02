@@ -1,0 +1,11 @@
+[submodule "uiniqu-api"]
+	path = uiniqu-api
+	url = https://github.com/rizkiaryandi/uiniqu_flask.git
+
+[submodule "uiniqu-web-administrator"]
+	path = uiniqu-web-administrator
+	url = https://github.com/rizkiaryandi/uiniqu-administrator.git
+    
+[submodule "uiniqu-mobile"]
+	path = uiniqu-mobile
+	url = https://github.com/rizkiaryandi/New-Uiniqu.git
